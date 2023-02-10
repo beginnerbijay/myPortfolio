@@ -1,14 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { useEffect } from "react";
+import { useState } from "react";
+import Home from "./components/Home";
+import Loader from "./Loader";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [loading,setloading] = useState(true);
+  useEffect(() => {
+    setTimeout(()=>{
+      setloading(false)
+  },3000)
+  }, [])
   return (
-    <div className="App">
-      <h1 className='header'>my Portfolio</h1>
-    </div>
-  )
+    <>
+      {loading?<Loader/>:<Home/>}
+      </>
+  );
 }
 
-export default App
+export default App;
