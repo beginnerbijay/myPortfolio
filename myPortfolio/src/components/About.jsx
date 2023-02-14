@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react";
 import React from "react";
 import { motion } from 'framer-motion'
+import resume from '../resume.pdf'
 
 function About() {
   const icon = {
@@ -70,7 +71,7 @@ function About() {
             <br />
             I am organized, dedicated, and a team player, who loves coding and eating.
           </motion.p>
-          <motion.a href='resume.html' target='_blank' variants={icon}><button className="btn">
+          <motion.a href={resume} target='_blank' variants={icon}><button className="btn">
             resume
             <Icon icon="line-md:downloading-loop" color="white" />
           </button>
