@@ -33,7 +33,8 @@ function Mini({image,tittle,gitlink,livelink}) {
     className='mini_box'
     variants={parent}
     initial='hidden'
-    whileInView='visible'>
+    whileInView='visible'
+    viewport={{ once: true }} >
         <motion.img src={image} variants={child}/>
         <motion.div className='icons' variants={child}>
           <h3>{tittle}</h3>

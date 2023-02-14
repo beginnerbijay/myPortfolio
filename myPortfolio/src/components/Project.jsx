@@ -68,7 +68,7 @@ function Project() {
   const child = {
     hidden: {
       opacity: 0,
-      y: 100,
+      y: 200,
     },
     visible: {
       opacity: 1,
@@ -83,12 +83,14 @@ function Project() {
       <motion.h1
       variants={icon}
       initial='hidden'
-      whileInView='visible'>Projects</motion.h1>
+      whileInView='visible'
+      viewport={{ once: true }} >Projects</motion.h1>
       <motion.div 
       className="tittle-underline"
       variants={icon}
       initial='hidden'
-      whileInView='visible'>
+      whileInView='visible'
+      viewport={{ once: true }} >
         <div className="underline-1"></div>
         <div className="underline-2"></div>
       </motion.div>
@@ -99,12 +101,14 @@ function Project() {
             className={idx === imageIndex ? "slide activeSlide" : "slide"} key={idx}
             variants={parent}
             initial='hidden'
-            whileInView='visible'>
+            whileInView='visible'
+            viewport={{ once: true }} >
               <motion.div 
               className="img_box"
               variants={icon}
               initial='hidden'
-              whileInView='visible'>
+              whileInView='visible'
+              viewport={{ once: true }} >
                 <div>
                 <Image placeholderImg="https://via.placeholder.com/400x200.png?text=Loding" src={img.src} alt={img}/>
                 <div className="nameing">
@@ -140,7 +144,8 @@ function Project() {
       <motion.h2
       variants={icon}
       initial='hidden'
-      whileInView='visible'>Other Noteworthy Projects</motion.h2>
+      whileInView='visible'
+      viewport={{ once: true }} >Other Noteworthy Projects</motion.h2>
       <div className="details_2">
         {pro?.map((minor, ind) => {
           return (

@@ -31,7 +31,7 @@ function About() {
   const child = {
     hidden: {
       opacity: 0,
-      y: 100,
+      y: 200,
     },
     visible: {
       opacity: 1,
@@ -48,12 +48,14 @@ function About() {
         className="image"
         variants={icon}
         initial="hidden"
-        whileInView="visible"></motion.div>
+        whileInView="visible"
+        viewport={{ once: true }} ></motion.div>
         <motion.div 
         className="about_box"
         variants={parent}
         initial='hidden'
-        whileInView='visible'>
+        whileInView='visible'
+        viewport={{ once: true }}>
           <motion.h1 className="about_head" variants={child}>About Me</motion.h1>
           <motion.div className="tittle-underline" variants={child}>
             <div className="underline-1"></div>
@@ -68,7 +70,7 @@ function About() {
             <br />
             I am organized, dedicated, and a team player, who loves coding and eating.
           </motion.p>
-          <motion.a href="https://drive.google.com/file/d/1-Gi6EZ0C_WhVYORlqvhFL30Zla3yeJ12/view?usp=sharing" target='_blank' variants={icon}><button className="btn">
+          <motion.a href='resume.html' target='_blank' variants={icon}><button className="btn">
             resume
             <Icon icon="line-md:downloading-loop" color="white" />
           </button>

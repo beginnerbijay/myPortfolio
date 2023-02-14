@@ -30,7 +30,7 @@ function Education() {
   const child = {
     hidden: {
       opacity: 0,
-      y: 100,
+      y: 300,
     },
     visible: {
       opacity: 1,
@@ -47,12 +47,14 @@ function Education() {
         className='heading'
       variants={icon}
       initial='hidden'
-      whileInView='visible'>Education</motion.h1>
+      whileInView='visible'
+      viewport={{ once: true }} >Education</motion.h1>
         <motion.div 
         className='tittle-underline'
       variants={icon}
       initial='hidden'
-      whileInView='visible'>
+      whileInView='visible'
+      viewport={{ once: true }} >
           <div className='underline-1'></div>
           <div className='underline-2'></div>
         </motion.div>
@@ -60,7 +62,8 @@ function Education() {
         className='wrapper'
         variants={parent}
         initial='hidden'
-        whileInView='visible'> 
+        whileInView='visible'
+        viewport={{ once: true }} > 
         <motion.div className='primary_details' variants={child}>
           <h3 className='sub_heading'>Parala maharaja engineering college, berhampur</h3>
           <p className='min_heading'>bachelor of technology</p>

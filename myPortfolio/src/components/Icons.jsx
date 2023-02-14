@@ -36,7 +36,8 @@ function Icons() {
       className="icons"
       variants={parent}
       initial='hidden'
-      whileInView='visible'>
+      whileInView='visible'
+      viewport={{ once: true }} >
         <motion.a href="https://github.com/beginnerbijay" target="_blank" variants={icon}><Icon icon="mdi:github" color="#222831" width="38" /></motion.a>
         <motion.a href="https://www.linkedin.com/in/d-bijay-patro-b8b146229" target="_blank" variants={icon}><Icon icon="mdi:linkedin" width="38" color="#222831" /></motion.a>
         <motion.a href="mailto:=dbijaypatro@gmail.com" target="_blank" variants={icon}><Icon icon="mdi:gmail" color="#222831" width="38" /></motion.a>

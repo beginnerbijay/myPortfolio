@@ -48,12 +48,14 @@ function Contact() {
       className="heading"
       variants={icon}
       initial='hidden'
-      whileInView='visible'>Contact Me</motion.h1>
+      whileInView='visible'
+      viewport={{ once: true }} >Contact Me</motion.h1>
       <motion.div 
       className="tittle-underline"
       variants={icon}
       initial='hidden'
-      whileInView='visible'>
+      whileInView='visible'
+      viewport={{ once: true }} >
         <div className="underline-1"></div>
         <div className="underline-2"></div>
       </motion.div>
@@ -62,7 +64,8 @@ function Contact() {
         className="form" action="https://formspree.io/f/mpzepqgl" method="POST" 
         variants={parent}
         initial='hidden'
-        whileInView='visible'>
+        whileInView='visible'
+        viewport={{ once: true }} >
           <motion.label htmlFor="name" variants={child}><Icon icon="line-md:account" width="24" inline={true} />Name</motion.label>
           <motion.input type="text" id="name" name="name" variants={child}/>
           <motion.label htmlFor="email" variants={child}><Icon icon="line-md:email-opened-twotone" width="24" inline={true} />Email</motion.label>

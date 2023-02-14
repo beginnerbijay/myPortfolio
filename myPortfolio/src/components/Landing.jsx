@@ -32,7 +32,7 @@ function Landing() {
   const child = {
     hidden: {
       opacity: 0,
-      y: 100,
+      y: 200,
     },
     visible: {
       opacity: 1,
@@ -53,6 +53,7 @@ function Landing() {
         variants={parent}
         initial="hidden"
         whileInView="visible"
+        viewport={{ once: true }} 
       >
         <motion.h1 className="heading" variants={child}>
           Hi, There
