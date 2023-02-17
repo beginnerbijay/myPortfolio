@@ -90,7 +90,7 @@ function Header() {
         initial="hidden"
         animate="visible"
       >
-        <img src={logo} className="logo" />
+        <img src={logo} className="logo" alt="logo"/>
       </motion.div>
       <motion.div
         className={`subheader ${menuOpen && windowSize < 768 ? "isMenu" : ""}`}

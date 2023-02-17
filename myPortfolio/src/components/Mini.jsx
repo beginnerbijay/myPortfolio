@@ -35,7 +35,7 @@ function Mini({image,tittle,gitlink,livelink}) {
     initial='hidden'
     whileInView='visible'
     viewport={{ once: true }} >
-        <motion.img src={image} variants={child}/>
+        <motion.img src={image} variants={child} alt='project image'/>
         <motion.div className='icons' variants={child}>
           <h3>{tittle}</h3>
           <div>

@@ -2,6 +2,8 @@ import { Icon } from "@iconify/react";
 import React from "react";
 import { motion } from 'framer-motion'
 import resume from '../resume.pdf'
+import img1 from '../assets/img1.webp'
+import img2 from '../assets/img2.png'
 
 function About() {
   const icon = {
@@ -50,7 +52,13 @@ function About() {
         variants={icon}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }} ></motion.div>
+        viewport={{ once: true }} >
+          <picture>
+            <source srcSet={img1}/>
+            <source srcSet={img2}/>
+          <img src={img2} alt='profile_pic'/>
+          </picture>
+        </motion.div>
         <motion.div 
         className="about_box"
         variants={parent}
